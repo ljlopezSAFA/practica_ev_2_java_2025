@@ -58,7 +58,9 @@ public class UtilidadesGeografiaTest {
 
     @Test
     void testEjercicio3() {
-        List<Ciudad> resultado = new UtilidadesGeografia().ejercicio3(ciudades, paises);
+        List<Ciudad> ciudadesPrueba = new ArrayList<>(ciudades);
+        ciudadesPrueba.addAll(ciudades);
+        List<Ciudad> resultado = new UtilidadesGeografia().ejercicio3(ciudadesPrueba, paises);
         assertEquals(1, resultado.size());
         assertTrue(resultado.contains(ciudades.get(0)));
     }
