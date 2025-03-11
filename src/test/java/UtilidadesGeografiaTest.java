@@ -1,10 +1,10 @@
 
+import com.sl.utilidades.UtilidadesGeografia;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 import com.sl.modelos.*;
-import com.sl.utilidades.UtilidadesGeografia;
 
 public class UtilidadesGeografiaTest {
 
@@ -76,7 +76,7 @@ public class UtilidadesGeografiaTest {
     @Test
     void testEjercicio5() {
         InformePais informe = new InformePais(paises.getFirst(), 5500000L, 3, 3);
-        InformePais informe2 = new InformePais(null, 15L, 1, 4);
+        InformePais informe2 = new InformePais(new Pais(), 15L, 1, 4);
         assertTrue(UtilidadesGeografia.ejercicio5(informe, paises.getFirst()));
         assertFalse(UtilidadesGeografia.ejercicio5(informe2, paises.getFirst()));
     }
